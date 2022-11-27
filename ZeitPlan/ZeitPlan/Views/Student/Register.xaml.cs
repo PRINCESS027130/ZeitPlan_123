@@ -43,10 +43,10 @@ namespace ZeitPlan.Views.Student
                 LoadingInd.IsRunning = true;
                 int LastID, NewID = 1;
 
-                var LastRecord = (await App.firebaseDatabase.Child("Student").OnceAsync<TBL_STUDENT>()).FirstOrDefault();
+                var LastRecord = (await App.firebaseDatabase.Child("TBL_STUDENT").OnceAsync<TBL_STUDENT>()).FirstOrDefault();
                 if (LastRecord != null)
                 {
-                    LastID = (await App.firebaseDatabase.Child("Student").OnceAsync<TBL_STUDENT>()).Max(a => a.Object.STUDENT_ID);
+                    LastID = (await App.firebaseDatabase.Child("TBL_STUDENT").OnceAsync<TBL_STUDENT>()).Max(a => a.Object.STUDENT_ID);
                     NewID = ++LastID;
                 }
                 TBL_STUDENT u = new TBL_STUDENT()
@@ -59,7 +59,7 @@ namespace ZeitPlan.Views.Student
 
                 };
                 
-                await App.firebaseDatabase.Child("Student").PostAsync(u);
+                await App.firebaseDatabase.Child("TBL_STUDENT").PostAsync(u);
                 LoadingInd.IsRunning = false;
                 //App.db.Insert(u);
                 await DisplayAlert("Success", "Account Registered", "Ok");

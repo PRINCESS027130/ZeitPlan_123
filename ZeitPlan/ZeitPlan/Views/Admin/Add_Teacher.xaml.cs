@@ -82,6 +82,7 @@ namespace ZeitPlan.Views.Admin
                         return;
                     }
 
+                    _mediaFile = SelectedImg;
                     PicPath = SelectedImg.Path;
                     Previewpic.Source = SelectedImg.Path;
 
@@ -156,7 +157,7 @@ namespace ZeitPlan.Views.Admin
                     TEACHER_NAME = txtTechName.Text,
                     TEACHER_EMAIL = txtTechEmail.Text,
                     TEACHER_ADDRESS=txtTechAdress.Text,
-                    TEACHER_PASSWORD= "*******",
+                    TEACHER_PASSWORD= txtTechPassword.Text,
                     TEACHER_PHNO=txtTechPhone.Text,
                     Image = StoredImageURL,
                     DEPARTMENT_FID = Department.Object.DEPARTMENT_ID,

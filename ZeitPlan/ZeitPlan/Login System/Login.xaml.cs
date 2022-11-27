@@ -74,7 +74,7 @@ namespace ZeitPlan.LoginSystem
                         await DisplayAlert("Error", "Email or password incorrect", "ok");
                         return;
                     }
-
+                    App.LoggedInStudent = check.Object;
                     App.Current.MainPage = new StudentSideBar();
                 }
 

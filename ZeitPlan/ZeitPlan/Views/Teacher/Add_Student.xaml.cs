@@ -1,4 +1,5 @@
-﻿using Firebase.Database.Query;
+﻿
+using Firebase.Database.Query;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -17,8 +18,8 @@ namespace ZeitPlan.Views.Teacher
         {
             InitializeComponent();
             LoadData();
-
         }
+
         async void LoadData()
         {
             var firebaseList = (await App.firebaseDatabase.Child("TBL_CLASS").OnceAsync<TBL_CLASS>()).Select(x => new TBL_CLASS
@@ -29,9 +30,8 @@ namespace ZeitPlan.Views.Teacher
             }).ToList();
             var refinedList = firebaseList.Select(x => x.CLASS_NAME).ToList();
             ddlClass.ItemsSource = refinedList;
-            
-        }
 
+        }
         private async void btnstudent_Clicked(object sender, EventArgs e)
         {
             try
@@ -70,8 +70,8 @@ namespace ZeitPlan.Views.Teacher
                 {
                     STUDENT_ID = NewID,
                     STUDENT_NAME = txtStName.Text,
-                    STUDENT_EMAIL = txtStEmail.Text,                  
-                    CLASS_FID = Class.Object.CLASS_ID,                   
+                    STUDENT_EMAIL = txtStEmail.Text,
+                    CLASS_FID = Class.Object.CLASS_ID,
                 };
 
                 await App.firebaseDatabase.Child("TBL_STUDENT").PostAsync(s);
@@ -86,6 +86,6 @@ namespace ZeitPlan.Views.Teacher
                 return;
             }
         }
+
     }
 }
-  

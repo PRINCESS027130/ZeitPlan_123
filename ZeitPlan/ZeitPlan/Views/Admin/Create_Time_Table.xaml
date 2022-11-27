@@ -7,7 +7,6 @@
         <StackLayout Padding="24">
            
             <Entry  Placeholder="Day" x:Name="txtDay" Keyboard="Chat"/>
-            <Label Text="Date" FontSize="20" HorizontalTextAlignment="Start"/>
             <DatePicker x:Name="date"/>
             <Picker Title="--Select Class" x:Name="ddlClass"/>
             <Picker Title="--Select Course" x:Name="ddlCourse"/>

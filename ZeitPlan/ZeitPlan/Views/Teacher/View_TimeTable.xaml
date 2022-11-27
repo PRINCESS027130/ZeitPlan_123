@@ -12,8 +12,8 @@
                             <ViewCell>
                                 <StackLayout Padding="24" >
                                     <Grid ColumnDefinitions="150,*" VerticalOptions="Center" HorizontalOptions="Center"  RowDefinitions="*" Grid.ColumnSpan="2" Grid.RowSpan="9" >
-                                        <Label Grid.Row="0"   FontAttributes="Bold" Grid.Column="0" BackgroundColor="LightBlue"  Text="TimeTable_ID:"/>
-                                        <Label Grid.Row="0" Grid.Column="1"  BackgroundColor="LightGray"  x:Name="TimeTableID"/>
+                                        <!--<Label Grid.Row="0"   FontAttributes="Bold" Grid.Column="0" BackgroundColor="LightBlue"  Text="TimeTable_ID:"/>
+                                        <Label Grid.Row="0" Grid.Column="1"  BackgroundColor="LightGray"  x:Name="TimeTableID"/>-->
                                         <Label BackgroundColor="LightBlue"    FontAttributes="Bold" Grid.Row="1"  Grid.Column="0" Text="Class:"/>
                                         <Label Grid.Row="1"   BackgroundColor="LightGray" Grid.Column="1" Text="{Binding CLASS_NAME}" x:Name="ClassFID"/>
 
@@ -22,7 +22,7 @@
                                         <Label Grid.Row="3"    FontAttributes="Bold" Grid.Column="0" BackgroundColor="LightBlue"   Text="Slot Name:"/>
                                         <Label Grid.Row="3" Grid.Column="1"  BackgroundColor="LightGray" Text="{Binding SLOT_NAME}" x:Name="Slot Name"/>
                                         <Label Grid.Row="4"    FontAttributes="Bold" Grid.Column="0" BackgroundColor="LightBlue"   Text="Day:"/>
-                                        <Label Grid.Row="4" Grid.Column="1"  BackgroundColor="LightGray" Text="{Binding Day}" x:Name="Day"/>
+                                        <Label Grid.Row="4" Grid.Column="1"  BackgroundColor="LightGray" Text="{Binding DAY}" x:Name="Day"/>
 
 
                                         <Label Grid.Row="5"    FontAttributes="Bold" Grid.Column="0" BackgroundColor="LightBlue"   Text="Slot_Start_Time:"/>

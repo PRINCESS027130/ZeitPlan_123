@@ -50,6 +50,12 @@ namespace ZeitPlan.Views.Student
                     var Slot = (await App.firebaseDatabase.Child("TBL_SLOT").OnceAsync<TBL_SLOT>()).FirstOrDefault(x => x.Object.SLOT_ID == item.Object.SLOT_FID);
                     var Room = (await App.firebaseDatabase.Child("TBL_ROOM").OnceAsync<TBL_ROOM>()).FirstOrDefault(x => x.Object.ROOM_ID == item.Object.ROOM_FID);
 
+                    if (Class.Object.CLASS_ID != App.LoggedInStudent.CLASS_FID)
+                    {
+                        continue;
+                    }
+
+
                     RefinedList.Add(new View_Model.View_TimeTable
                     {
                         ID = item.Object.TIMETABLE_ID,

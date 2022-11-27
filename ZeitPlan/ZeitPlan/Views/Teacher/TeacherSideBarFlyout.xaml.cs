@@ -44,7 +44,8 @@ namespace ZeitPlan.Views.Teacher
                     //new TeacherSideBarFlyoutMenuItem { Id = 3, Icon="ic_diary", Title = "Daily Diary" },
                                        
                     //new TeacherSideBarFlyoutMenuItem { Id = 3, Icon="ic_mangiary", Title = "Manage Diary" },
-
+                    new TeacherSideBarFlyoutMenuItem { Id = 6, Icon="ic_about", Title = "Add Student", TargetType=typeof(Add_Student) },
+                    new TeacherSideBarFlyoutMenuItem { Id = 7, Icon="ic_mangClass", Title = "Manage Student", TargetType=typeof(Manage_Student) },
                      new TeacherSideBarFlyoutMenuItem { Id = 8, Icon="ic_phone", Title = "Contact Us", TargetType=typeof(Contact) },
                       new TeacherSideBarFlyoutMenuItem { Id = 9, Icon="ic_group", Title = "About Us", TargetType=typeof(About) },
                 });

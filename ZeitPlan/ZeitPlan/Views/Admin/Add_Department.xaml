@@ -5,7 +5,7 @@
     <ContentPage.Content>
         <StackLayout Padding="24">
             <Entry x:Name="txtDtName" Placeholder="Department Name" Keyboard="Chat"/>
-            <Entry x:Name="txtDtFID" Placeholder="Department FID" Keyboard="Numeric"/>
+            <Entry x:Name="txtDtFID" Placeholder="Department ID" Keyboard="Numeric"/>
 
             <ActivityIndicator x:Name="LoadingInd" IsRunning="False" />
             <Button Text="Add Department" x:Name="btnDepartmet" Clicked="btnDepartmet_Clicked" />

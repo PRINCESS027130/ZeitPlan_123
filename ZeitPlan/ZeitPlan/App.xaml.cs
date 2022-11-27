@@ -22,6 +22,7 @@ namespace ZeitPlan
         public static FirebaseClient firebaseDatabase = new FirebaseClient("https://zeitplan-1fc20-default-rtdb.firebaseio.com/");
 
         public static TBL_TEACHER LoggedInUser = null;
+        public static TBL_STUDENT LoggedInStudent = null;
 
         public App()
         {
